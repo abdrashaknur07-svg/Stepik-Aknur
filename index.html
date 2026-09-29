@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Моя визитка</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .card {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Адаптация для телефона */
+        @media (max-width: 600px) {
+            .cards {
+                flex-direction: column;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Моя визитка</h1>
+
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Навыки</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="about">
+            <h2>Обо мне</h2>
+
+            <p>
+                Меня зовут Аружан. Я изучаю информационные технологии
+                и развиваюсь в сфере программирования и веб-разработки.
+            </p>
+
+            <button id="myButton">Нажми меня</button>
+
+            <p id="message">Здесь появится сообщение.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Мои навыки</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>HTML</h3>
+                    <p>Создание структуры веб-страниц.</p>
+                </div>
+
+                <div class="card">
+                    <h3>CSS</h3>
+                    <p>Оформление и адаптивный дизайн.</p>
+                </div>
+
+                <div class="card">
+                    <h3>JavaScript</h3>
+                    <p>Добавление интерактивности на страницу.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>©️ 2026 Моя визитка</p>
+    </footer>
+
+    <script>
+        const button = document.getElementById("myButton");
+        const message = document.getElementById("message");
+
+        button.addEventListener("click", function() {
+            message.textContent = "Спасибо, что посетили мою страницу!";
+        });
+    </script>
+
+</body>
+</html>
